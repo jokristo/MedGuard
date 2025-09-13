@@ -18,3 +18,5 @@ dj-database-url
 gunicorn
 
 setuptools
+
+psycopg2
