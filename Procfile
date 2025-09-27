@@ -1,1 +1,1 @@
-web: gunicorn MedGuard.wsgi
+web: python create_superuser.py && gunicorn MedGuard.wsgi

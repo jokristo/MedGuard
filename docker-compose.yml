@@ -6,6 +6,10 @@ services:
       POSTGRES_DB: medguard_db
       POSTGRES_USER: medguard_user
       POSTGRES_PASSWORD: medguard_password
+      # Ajout du mot de passe pour l'utilisateur superutilisateur 'postgres'
+      POSTGRES_INITDB_ARGS: "--auth-host=md5"
+      # Optionnel : tu peux aussi ajouter cette ligne si tu veux explicitement définir le mot de passe du superutilisateur
+      # POSTGRES_PASSWORD_POSTGRES: super_password
     ports:
       - "5432:5432"
     volumes:

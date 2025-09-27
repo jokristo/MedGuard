@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x=&dsatu=%#7z5m2%0a=o+41553z+$-m&&3m%ya7f-t0)ty*da'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
-
+# DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
+DEBUG = True
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "*").split(",")
 
 
@@ -87,7 +87,7 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get("DATABASE_URL")
+        default="postgres://medguard_user:medguard_password@localhost:5432/medguard_db"
     )
 }
 
