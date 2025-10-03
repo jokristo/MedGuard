@@ -5,3 +5,4 @@ class MesureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Mesure
         fields = '__all__'
+        
